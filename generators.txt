@@ -1,0 +1,10 @@
+php artisan infyom:api_scaffold Level --fromTable --tableName=levels --save
+php artisan infyom:api_scaffold Subject --fromTable --tableName=subjects --save
+php artisan infyom:api_scaffold Content --fromTable --tableName=contents --save
+php artisan infyom:api_scaffold Files --fromTable --tableName=files --save
+php artisan infyom:api_scaffold Users --fromTable --tableName=users --save
+php artisan infyom:api_scaffold Rating --fromTable --tableName=ratings --save
+php artisan infyom:api_scaffold FileComment --fromTable --tableName=file_comments --save
+php artisan infyom:api_scaffold ContentComment --fromTable --tableName=content_comments --save
+php artisan infyom:api_scaffold Favorite --fromTable --tableName=favorites --save
+php artisan infyom:api_scaffold Planification --fromTable --tableName=planifications --save

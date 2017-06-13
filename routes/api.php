@@ -16,3 +16,23 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::resource('levels', 'LevelAPIController');
+
+Route::resource('contents', 'ContentAPIController');
+
+Route::resource('files', 'FilesAPIController');
+
+Route::resource('users', 'UsersAPIController');
+
+Route::resource('ratings', 'RatingAPIController');
+
+Route::resource('file_comments', 'FileCommentAPIController');
+
+Route::resource('content_comments', 'ContentCommentAPIController');
+
+Route::resource('favorites', 'FavoriteAPIController');
+
+Route::resource('planifications', 'PlanificationAPIController');
+
+Route::resource('subjects', 'SubjectAPIController');
