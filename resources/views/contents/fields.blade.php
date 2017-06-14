@@ -13,8 +13,28 @@
 <!-- Subjectsid Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('subjectsid', 'Subjectsid:') !!}
-    {!! Form::number('subjectsid', null, ['class' => 'form-control']) !!}
+
+
+   <select name="subjectsid" class="form-control">
+    	@foreach ($levels as $level)
+  <optgroup label="{{ $level->name }}">
+  @foreach ($level->subjects as $subject)
+     <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+  @endforeach
+  </optgroup>
+@endforeach
+
+    </select>
 </div>
+
+
+
+<div class="form-group col-sm-12">
+    {!! Form::label('description', 'Descripción:') !!}
+    {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+</div>
+
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

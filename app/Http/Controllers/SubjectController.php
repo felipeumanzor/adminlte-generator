@@ -39,7 +39,14 @@ class SubjectController extends AppBaseController
      */
     public function create()
     {
-        return view('subjects.create');
+        //$levels = \App\Utils\Utilidades::getIdNameFrom(\App\Models\Level::all());
+
+        //$levels = \App\Models\Subject::with('levels')->get();
+
+        $levels = \App\Models\Level::pluck('name', 'id');
+
+
+        return view('subjects.create')->with('levels',$levels);
     }
 
     /**
@@ -90,6 +97,7 @@ class SubjectController extends AppBaseController
     public function edit($id)
     {
         $subject = $this->subjectRepository->findWithoutFail($id);
+        $levels = \App\Models\Level::pluck('name', 'id');
 
         if (empty($subject)) {
             Flash::error('Subject not found');
@@ -97,7 +105,7 @@ class SubjectController extends AppBaseController
             return redirect(route('subjects.index'));
         }
 
-        return view('subjects.edit')->with('subject', $subject);
+        return view('subjects.edit')->with(array('subject'=> $subject, 'levels'=>$levels));
     }
 
     /**

@@ -7,7 +7,7 @@
 <!-- Cycle Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cycle', 'Cycle:') !!}
-    {!! Form::text('cycle', null, ['class' => 'form-control']) !!}
+    {!! Form::select('cycle', ['Parvularia' => 'Parvularia', 'Enseñanza Básica' => 'Enseñanza Básica', 'Enseñanza Media' => 'Enseñanza Media'] ,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

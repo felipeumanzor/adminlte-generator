@@ -22,7 +22,8 @@ class Content extends Model
     public $fillable = [
         'id_mineduc',
         'name',
-        'subjectsid'
+        'subjectsid',
+        'description'
     ];
 
     /**

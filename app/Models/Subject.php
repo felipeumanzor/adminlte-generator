@@ -20,7 +20,7 @@ class Subject extends Model
 
 
     public $fillable = [
-        'levelsid',
+        'level_id',
         'name'
     ];
 
@@ -31,8 +31,8 @@ class Subject extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'levelsid' => 'integer',
-        'name' => 'integer'
+        'level_id' => 'integer',
+        'name' => 'string'
     ];
 
     /**

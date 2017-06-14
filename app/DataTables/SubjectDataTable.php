@@ -72,7 +72,7 @@ class SubjectDataTable extends DataTable
     private function getColumns()
     {
         return [
-            'levelsid' => ['name' => 'levelsid', 'data' => 'levelsid'],
+            'levelsid' => ['name' => 'level_id', 'data' => 'level_id'],
             'name' => ['name' => 'name', 'data' => 'name']
         ];
     }

@@ -38,7 +38,7 @@ class Users extends Model
         'email' => 'string',
         'password' => 'string',
         'profile_pic' => 'string',
-        'remember_token' => 'integer'
+        'remember_token' => 'string'
     ];
 
     /**

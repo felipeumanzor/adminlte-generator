@@ -34,7 +34,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+        <a href="{{ url('/home') }}"><b>Aprendizaje</b>Colaborativo</a><br>
+        <p style="font-size:18px">Las clases, las hacemos entre todos</p>
     </div>
 
     <!-- /.login-logo -->

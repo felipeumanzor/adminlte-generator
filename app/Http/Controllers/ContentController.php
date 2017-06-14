@@ -39,7 +39,10 @@ class ContentController extends AppBaseController
      */
     public function create()
     {
-        return view('contents.create');
+
+        $levels = \App\Models\Level::with('subjects')->get();
+
+        return view('contents.create')->with('levels',$levels);
     }
 
     /**
@@ -90,6 +93,7 @@ class ContentController extends AppBaseController
     public function edit($id)
     {
         $content = $this->contentRepository->findWithoutFail($id);
+        $levels = \App\Models\Level::with('subjects')->get();
 
         if (empty($content)) {
             Flash::error('Content not found');
@@ -97,7 +101,7 @@ class ContentController extends AppBaseController
             return redirect(route('contents.index'));
         }
 
-        return view('contents.edit')->with('content', $content);
+        return view('contents.edit')->with(array('content'=>$content, 'levels'=>$levels));
     }
 
     /**
